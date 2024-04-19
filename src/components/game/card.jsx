@@ -1,22 +1,20 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-export default function Card({ key, url, onClick }) {
+export default function Card({ url, onClick }) {
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
     onClick(clicked, setClicked);
   };
-
   return (
     <div className="card">
-      <img key={key} src={url} onClick={handleClick} />
+      <img src={url} onClick={handleClick} />
     </div>
   );
 }
 
 Card.propTypes = {
-  key: PropTypes.string,
   url: PropTypes.string,
-  onClick: PropTypes.string,
+  onClick: PropTypes.func,
 };
