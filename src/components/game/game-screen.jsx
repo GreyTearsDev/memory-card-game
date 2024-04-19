@@ -25,6 +25,16 @@ export default function GameScreen({ gifs, setEndGame, highestScore, setHighestS
     <div className="game-screen">
       <header>
         <Logo />
+        <div className="audio-control-container">
+          <div>
+            <label htmlFor="music">Music</label>
+            <input type="radio" id="music" />
+          </div>
+          <div>
+            <label htmlFor="sfx">Sfx</label>
+            <input type="radio" id="sfx" />
+          </div>
+        </div>
         <div>
           <p>Score: {score}</p>
           <p>Highest Score: {highestScore}</p>
