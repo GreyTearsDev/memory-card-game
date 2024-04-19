@@ -42,7 +42,7 @@ export default function GameScreen({ gifs, setEndGame, highestScore, setHighestS
       </header>
       <main className="card-container">
         {gifs && gifs.map(gif => {
-          return <Card key={gif.id} src={gif.images["480w_still"].url} onClick={handleClick} />;
+          return <Card key={gif.id} url={gif.images["480w_still"].url} onClick={handleClick} />;
         })}
       </main>
     </div>
