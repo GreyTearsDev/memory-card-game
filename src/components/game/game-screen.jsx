@@ -5,11 +5,14 @@ import Card from "./card";
 
 export default function GameScreen({ gifs, setEndGame, highestScore, setHighestScore }) {
   const [score, setScore] = useState(0);
+  const [setClickedStatus, setSetClickedStatus] = useState(false);
 
   const handleClick = (clicked, setClicked) => {
     if (clicked) {
       if (score > highestScore) setHighestScore(score);
-      return setEndGame(true); // causes a rerender
+      setScore(0);
+      setSetClickedStatus(true);
+      return setEndGame(true);
     }
 
     setScore(prev => prev + 1);
@@ -17,6 +20,8 @@ export default function GameScreen({ gifs, setEndGame, highestScore, setHighestS
 
     if (score === 10) {
       if (score > highestScore) setHighestScore(score);
+      setScore(0);
+      setSetClickedStatus(true);
       return setEndGame(true);
     }
   };
@@ -42,7 +47,14 @@ export default function GameScreen({ gifs, setEndGame, highestScore, setHighestS
       </header>
       <main className="card-container">
         {gifs && gifs.map(gif => {
-          return <Card key={gif.id} url={gif.images["480w_still"].url} onClick={handleClick} />;
+          return (
+            <Card
+              key={gif.id}
+              url={gif.images["480w_still"].url}
+              onClick={handleClick}
+              setClickedStatus={setClickedStatus}
+            />
+          );
         })}
       </main>
     </div>
