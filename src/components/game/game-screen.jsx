@@ -32,12 +32,12 @@ export default function GameScreen({ gifs, setEndGame, highestScore, setHighestS
         <Logo />
         <div className="audio-control-container">
           <div>
-            <label htmlFor="music">Music</label>
             <input type="checkbox" id="music" />
+            <label htmlFor="music">Music</label>
           </div>
           <div>
-            <label htmlFor="sfx">Sfx</label>
             <input type="checkbox" id="sfx" />
+            <label htmlFor="sfx">Sfx</label>
           </div>
         </div>
         <div>
