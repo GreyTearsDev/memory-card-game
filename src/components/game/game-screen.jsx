@@ -3,26 +3,24 @@ import { useState } from "react";
 import Logo from "../logo";
 import Card from "./card";
 
-export default function GameScreen({ gifs, setEndGame, highestScore, setHighestScore }) {
+export default function GameScreen({ gifs, highestScore, onGameOver }) {
   const [score, setScore] = useState(0);
   const [setClickedStatus, setSetClickedStatus] = useState(false);
 
   const handleClick = (clicked, setClicked) => {
     if (clicked) {
-      if (score > highestScore) setHighestScore(score);
+      onGameOver(score);
       setScore(0);
-      setSetClickedStatus(true);
-      return setEndGame(true);
+      return setSetClickedStatus(true);
     }
 
     setScore(prev => prev + 1);
     setClicked(true);
 
     if (score === 10) {
-      if (score > highestScore) setHighestScore(score);
+      onGameOver(score);
       setScore(0);
-      setSetClickedStatus(true);
-      return setEndGame(true);
+      return setSetClickedStatus(true);
     }
   };
 
@@ -63,7 +61,6 @@ export default function GameScreen({ gifs, setEndGame, highestScore, setHighestS
 
 GameScreen.propTypes = {
   gifs: PropTypes.array,
-  setEndGame: PropTypes.func,
   highestScore: PropTypes.number,
-  setHighestScore: PropTypes.func,
+  onGameOver: PropTypes.func,
 };
