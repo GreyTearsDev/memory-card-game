@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
+import shuffleArray from "../../util/shuffle-array";
 import Logo from "../logo";
 import Card from "./card";
 
@@ -44,7 +45,7 @@ export default function GameScreen({ gifs, highestScore, onGameOver }) {
         </div>
       </header>
       <main className="card-container">
-        {gifs && gifs.map(gif => {
+        {gifs && shuffleArray(gifs).map(gif => {
           return (
             <Card
               key={gif.id}
