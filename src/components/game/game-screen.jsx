@@ -1,9 +1,8 @@
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
-import shuffleArray from "../../util/shuffle-array";
 import Logo from "../logo";
 import AudioControl from "./audio-control";
-import Card from "./card";
+import CardContainer from "./card-container";
 
 export default function GameScreen(props) {
   const [score, setScore] = useState(0);
@@ -28,6 +27,7 @@ export default function GameScreen(props) {
     if (clicked) {
       props.onGameOver(score);
       setScore(0);
+      props.audio.stopPlayingMusic();
       return setSetClickedStatus(true);
     }
 
@@ -37,6 +37,7 @@ export default function GameScreen(props) {
     if (score === 10) {
       props.onGameOver(score);
       setScore(0);
+      props.audio.stopPlayingMusic();
       return setSetClickedStatus(true);
     }
   };
@@ -59,18 +60,12 @@ export default function GameScreen(props) {
         </div>
       </header>
 
-      <main className="card-container">
-        {props.gifs && shuffleArray(props.gifs).map(gif => {
-          return (
-            <Card
-              key={gif.id}
-              url={gif.images["480w_still"].url}
-              onClick={handleClick}
-              setClickedStatus={setClickedStatus}
-            />
-          );
-        })}
-      </main>
+      <CardContainer
+        handleClick={handleClick}
+        setClickedStatus={setClickedStatus}
+        audio={props.audio}
+        gifs={props.gifs}
+      />
     </div>
   );
 }
