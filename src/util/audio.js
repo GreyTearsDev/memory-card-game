@@ -1,7 +1,7 @@
 import {Howl} from "howler"
 
 export default function GenerateAudioContext() {
-  let initialVolume = 0.2;
+  let initialVolume = 0.5;
 
   const sfx = {
     highScore: new Howl({
@@ -32,7 +32,7 @@ export default function GenerateAudioContext() {
   
   const music = {
     dreamers: new Howl({
-      src: ['../../public/music/Dreamers.mp3'],
+      src: ['../../public/music/paw-theme.mp3'],
       loop: true,
       volume: initialVolume,
     })
@@ -41,16 +41,18 @@ export default function GenerateAudioContext() {
   
   const playMusic = (bool) => {
     if (bool) {
-      music.dreamers.play()
+      if (!music.dreamers.playing()) music.dreamers.play();
+      music.dreamers.volume(initialVolume);
     } else {
-      music.dreamers.stop()
+      music.dreamers.volume(0);
     }
   }
 
-  
+  const stopPlayingMusic = () => music.dreamers.stop();
+
   const playSFX = (bool) =>  {
     for (let sound in sfx) {
-      sfx[sound].volume = bool ? initialVolume : 0;
+      sfx[sound].volume(bool ? initialVolume : 0);
     }
   }
   const playSFXSound = (target) => sfx[target].play();
@@ -60,5 +62,6 @@ export default function GenerateAudioContext() {
     playMusic,
     playSFX,
     playSFXSound,
+    stopPlayingMusic,
   }
 }
