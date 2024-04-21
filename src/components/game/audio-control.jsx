@@ -9,7 +9,7 @@ export default function AudioControl({ audio }) {
         <label htmlFor="music">Music</label>
       </div>
       <div>
-        <input type="range" min={0} max={1} id="sfx" onChange={handleSFXVolume} />
+        <input type="range" min={0} max={100} id="sfx" onChange={handleSFXVolume} />
         <label htmlFor="sfx">Sfx</label>
       </div>
     </>
