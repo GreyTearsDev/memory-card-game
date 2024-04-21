@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import shuffleArray from "../../util/shuffle-array";
 import Logo from "../logo";
+import AudioControl from "./audio-control";
 import Card from "./card";
 
 export default function GameScreen({ gifs, highestScore, onGameOver }) {
@@ -30,14 +31,7 @@ export default function GameScreen({ gifs, highestScore, onGameOver }) {
       <header>
         <Logo />
         <div className="audio-control-container">
-          <div>
-            <input type="checkbox" id="music" />
-            <label htmlFor="music">Music</label>
-          </div>
-          <div>
-            <input type="checkbox" id="sfx" />
-            <label htmlFor="sfx">Sfx</label>
-          </div>
+          <AudioControl />
         </div>
         <div>
           <p>Score: {score}</p>
