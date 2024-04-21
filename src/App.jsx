@@ -22,7 +22,6 @@ function App() {
 
   const handleStartGame = () => {
     setStartGame(true);
-    audio.music.dreamers.play();
   };
 
   const handleRestartGame = () => {
@@ -39,7 +38,12 @@ function App() {
     <div>
       {!startGame && !endGame && <StartScreen onGameStart={handleStartGame} />}
       {startGame && !endGame && (
-        <GameScreen gifs={gifs} highestScore={highestScore} onGameOver={handleGameOver} audio={audio} />
+        <GameScreen
+          gifs={gifs}
+          highestScore={highestScore}
+          onGameOver={handleGameOver}
+          audio={audio}
+        />
       )}
       {!startGame && endGame && <EndScreen onGameRestart={handleRestartGame} />}
     </div>
