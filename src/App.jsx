@@ -33,6 +33,8 @@ function App() {
     if (score > highestScore) {
       setTimeout(() => audio.playSFXSound("highScore"), 300);
       setHighestScore(score);
+    } else {
+      setTimeout(() => audio.playSFXSound("gameover"), 300);
     }
     setStartGame(false);
     setEndGame(true);
