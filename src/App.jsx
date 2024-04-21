@@ -30,7 +30,10 @@ function App() {
   };
 
   const handleGameOver = (score) => {
-    if (score > highestScore) setHighestScore(score);
+    if (score > highestScore) {
+      audio.playSFXSound("highScore");
+      setHighestScore(score);
+    }
     setStartGame(false);
     setEndGame(true);
   };
