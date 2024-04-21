@@ -12,20 +12,8 @@ export default function GenerateAudioContext() {
       src: ['../../public/sfx/gameover.mp3'],
       volume: initialVolume,
     }),
-    success: new Howl({
-      src: ['../../public/sfx/success.mp3'],
-      volume: initialVolume,
-    }),
     click: new Howl({
       src: ['../../public/sfx/click.mp3'],
-      volume: initialVolume,
-    }),
-    cheers1: new Howl({
-      src: ['../../public/sfx/cheers1.mp3'],
-      volume: initialVolume,
-    }),
-    cheers2: new Howl({
-      src: ['../../public/sfx/cheers2.mp3'],
       volume: initialVolume,
     }),
   }
