@@ -25,6 +25,7 @@ function App() {
   };
 
   const handleRestartGame = () => {
+    audio.playSFXSound("click");
     setStartGame(true);
     setEndGame(false);
   };
@@ -39,6 +40,7 @@ function App() {
     setStartGame(false);
     setEndGame(true);
   };
+
   return (
     <div>
       {!startGame && !endGame && <StartScreen onGameStart={handleStartGame} />}
