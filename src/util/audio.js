@@ -1,33 +1,32 @@
 import {Howl} from "howler"
 
 export default function GenerateAudioContext() {
-  let sfxVolume = 0.5;
-  let musicVolume = 0.5;
+  let initialVolume = 0.2;
 
   const sfx = {
     highScore: new Howl({
       src: ['../../public/sfx/highscore.mp3'],
-      volume: sfxVolume,
+      volume: initialVolume,
     }),
     gameover: new Howl({
       src: ['../../public/sfx/gameover.mp3'],
-      volume: sfxVolume,
+      volume: initialVolume,
     }),
     success: new Howl({
       src: ['../../public/sfx/success.mp3'],
-      volume: sfxVolume,
+      volume: initialVolume,
     }),
     click: new Howl({
       src: ['../../public/sfx/click.mp3'],
-      volume: sfxVolume,
+      volume: initialVolume,
     }),
     cheers1: new Howl({
       src: ['../../public/sfx/cheers1.mp3'],
-      volume: sfxVolume,
+      volume: initialVolume,
     }),
     cheers2: new Howl({
       src: ['../../public/sfx/cheers2.mp3'],
-      volume: sfxVolume,
+      volume: initialVolume,
     }),
   }
   
@@ -35,17 +34,31 @@ export default function GenerateAudioContext() {
     dreamers: new Howl({
       src: ['../../public/music/Dreamers.mp3'],
       loop: true,
-      volume: musicVolume,
+      volume: initialVolume,
     })
   }
 
-  const updateSFXVolume= (value) => sfxVolume = value;
-  const updateMusicVolume = (value) => musicVolume = value;
+  
+  const playMusic = (bool) => {
+    if (bool) {
+      music.dreamers.play()
+    } else {
+      music.dreamers.stop()
+    }
+  }
+
+  
+  const playSFX = (bool) =>  {
+    for (let sound in sfx) {
+      sfx[sound].volume = bool ? initialVolume : 0;
+    }
+  }
+  const playSFXSound = (target) => sfx[target].play();
+  
 
   return {
-    sfx,
-    music,
-    updateMusicVolume,
-    updateSFXVolume,
+    playMusic,
+    playSFX,
+    playSFXSound,
   }
 }
