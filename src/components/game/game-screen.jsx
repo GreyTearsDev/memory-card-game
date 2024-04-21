@@ -5,7 +5,7 @@ import Logo from "../logo";
 import AudioControl from "./audio-control";
 import Card from "./card";
 
-export default function GameScreen({ gifs, highestScore, onGameOver }) {
+export default function GameScreen({ gifs, highestScore, onGameOver, audio }) {
   const [score, setScore] = useState(0);
   const [setClickedStatus, setSetClickedStatus] = useState(false);
 
@@ -31,7 +31,7 @@ export default function GameScreen({ gifs, highestScore, onGameOver }) {
       <header>
         <Logo />
         <div className="audio-control-container">
-          <AudioControl />
+          <AudioControl audio={audio} />
         </div>
         <div>
           <p>Score: {score}</p>
@@ -58,4 +58,5 @@ GameScreen.propTypes = {
   gifs: PropTypes.array,
   highestScore: PropTypes.number,
   onGameOver: PropTypes.func,
+  audio: PropTypes.object,
 };
