@@ -28,14 +28,15 @@ export default function GameScreen(props) {
       props.onGameOver(score);
       setScore(0);
       props.audio.stopPlayingMusic();
-      return setSetClickedStatus(true);
+      setSetClickedStatus(true);
+      return;
     }
 
     setScore(prev => prev + 1);
     setClicked(true);
 
-    if (score === 10) {
-      props.onGameOver(score);
+    if (score === 9) {
+      props.onGameOver(score + 1);
       setScore(0);
       props.audio.stopPlayingMusic();
       return setSetClickedStatus(true);
