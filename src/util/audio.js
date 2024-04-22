@@ -27,16 +27,21 @@ export default function GenerateAudioContext() {
   }
 
   
+
   const playMusic = (bool) => {
     if (bool) {
       if (!music.dreamers.playing()) music.dreamers.play();
+    music.dreamers.fade(0,initialVolume, 300)
       music.dreamers.volume(initialVolume);
     } else {
-      music.dreamers.volume(0);
+    music.dreamers.fade(initialVolume, 0, 500)
     }
   }
 
-  const stopPlayingMusic = () => music.dreamers.stop();
+  const stopPlayingMusic = () => {
+    music.dreamers.fade(initialVolume, 0, 500)
+    music.dreamers.stop()
+  };
 
   const playSFX = (bool) =>  {
     for (let sound in sfx) {
