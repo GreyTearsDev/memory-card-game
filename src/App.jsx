@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import EndScreen from "./components/end-menu/end-screen";
 import GameScreen from "./components/game/game-screen";
-import StartScreen from "./components/start-menu/start-screen";
-import "./styles.css";
 import LoadingWidget from "./components/loading";
+import StartScreen from "./components/start-menu/start-screen";
 import GenerateAudioContext from "./util/audio";
 
 function App() {
