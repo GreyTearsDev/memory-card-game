@@ -3,6 +3,7 @@ import EndScreen from "./components/end-menu/end-screen";
 import GameScreen from "./components/game/game-screen";
 import StartScreen from "./components/start-menu/start-screen";
 import "./App.css";
+import LoadingWidget from "./components/loading";
 import GenerateAudioContext from "./util/audio";
 
 function App() {
@@ -44,14 +45,16 @@ function App() {
   return (
     <div>
       {!startGame && !endGame && <StartScreen onGameStart={handleStartGame} />}
-      {startGame && !endGame && (
-        <GameScreen
-          gifs={gifs}
-          highestScore={highestScore}
-          onGameOver={handleGameOver}
-          audio={audio}
-        />
-      )}
+      {startGame && !endGame && (gifs
+        ? (
+          <GameScreen
+            gifs={gifs}
+            highestScore={highestScore}
+            onGameOver={handleGameOver}
+            audio={audio}
+          />
+        )
+        : <LoadingWidget />)}
       {!startGame && endGame && <EndScreen onGameRestart={handleRestartGame} />}
     </div>
   );
