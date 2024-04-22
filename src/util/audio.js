@@ -5,22 +5,22 @@ export default function GenerateAudioContext() {
 
   const sfx = {
     highScore: new Howl({
-      src: ['/sfx/highscore.mp3'],
+      src: ['assets/sfx/highscore.mp3'],
       volume: initialVolume,
     }),
     gameover: new Howl({
-      src: ['/sfx/gameover.mp3'],
+      src: ['assets/sfx/gameover.mp3'],
       volume: initialVolume,
     }),
     click: new Howl({
-      src: ['/sfx/click.mp3'],
+      src: ['assets/sfx/click.mp3'],
       volume: initialVolume,
     }),
   }
   
   const music = {
     dreamers: new Howl({
-      src: ['/music/paw-theme.mp3'],
+      src: ['assets/music/paw-theme.mp3'],
       loop: true,
       volume: initialVolume,
     })
