@@ -19,7 +19,7 @@ function App() {
     fetch(apiURL)
       .then(response => response.json())
       .then(response => setGifs(response.data));
-  }, []);
+  }, [apiURL]);
 
   const handleStartGame = () => {
     setStartGame(true);
