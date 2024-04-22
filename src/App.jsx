@@ -23,6 +23,7 @@ function App() {
   }, [apiURL]);
 
   const handleStartGame = () => {
+    audio.playSFXSound("click");
     setStartGame(true);
   };
 
