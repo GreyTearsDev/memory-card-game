@@ -8,6 +8,7 @@ import GenerateAudioContext from "./util/audio";
 
 function App() {
   const [highestScore, setHighestScore] = useState(0);
+  const [currentFinalScore, setCurrentFinalScore] = useState(0);
   const [endGame, setEndGame] = useState(false);
   const [startGame, setStartGame] = useState(false);
   const [gifs, setGifs] = useState(null);
@@ -29,6 +30,7 @@ function App() {
     audio.playSFXSound("click");
     setStartGame(true);
     setEndGame(false);
+    setCurrentFinalScore(0);
   };
 
   const handleGameOver = (score) => {
@@ -38,6 +40,7 @@ function App() {
     } else {
       setTimeout(() => audio.playSFXSound("gameover"), 300);
     }
+    setCurrentFinalScore(score);
     setStartGame(false);
     setEndGame(true);
   };
@@ -55,7 +58,13 @@ function App() {
           />
         )
         : <LoadingWidget />)}
-      {!startGame && endGame && <EndScreen onGameRestart={handleRestartGame} />}
+      {!startGame && endGame && (
+        <EndScreen
+          currentFinalScore={currentFinalScore}
+          onGameRestart={handleRestartGame}
+          highestScore={highestScore}
+        />
+      )}
     </div>
   );
 }
