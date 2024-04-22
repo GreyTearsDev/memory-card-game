@@ -4,7 +4,7 @@ export default function EndScreen({ onGameRestart, highestScore, currentFinalSco
   const getStars = () => {
     let stars = "";
     for (let i = 0; i < 5; i++) {
-      (i < (currentFinalScore / 2)) ? stars += "⭐️" : stars += "☆";
+      (i < (currentFinalScore / 2)) ? stars += "⭐️" : stars += "★";
     }
     return stars;
   };
