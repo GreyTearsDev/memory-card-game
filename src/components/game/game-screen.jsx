@@ -13,7 +13,7 @@ export default function GameScreen(props) {
   useEffect(() => {
     props.audio.playMusic(musicIsOn);
     props.audio.playSFX(sfxAreOn);
-  }, [musicIsOn, sfxAreOn]);
+  }, [musicIsOn, sfxAreOn, props.audio]);
 
   const handleMusic = () => {
     setMusicIsOn(!musicIsOn);
@@ -71,6 +71,7 @@ export default function GameScreen(props) {
 }
 
 GameScreen.propTypes = {
+  audio: PropTypes.object,
   gifs: PropTypes.array,
   highestScore: PropTypes.number,
   onGameOver: PropTypes.func,
