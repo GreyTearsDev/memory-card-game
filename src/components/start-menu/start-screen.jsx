@@ -10,6 +10,14 @@ export default function StartScreen({ onGameStart }) {
           <Logo />
         </div>
         <button type="button" onClick={onGameStart}>Start Game</button>
+        <div className="credits">
+          <p>
+            Created by <a href="https://github.com/GreyTearsDev">Tirso Samalungo (GreyTearsDev)</a>
+          </p>
+          <p>
+            Powered by <a href="https://giphy.com">GIPHY</a>
+          </p>
+        </div>
       </div>
     </div>
   );
