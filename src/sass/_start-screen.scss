@@ -1,0 +1,35 @@
+@use "./variables" as var;
+@use "./helpers" as help;
+
+.start-screen {
+  @include help.flex-centered(column);
+  @include help.gradient-general();
+  height: 100vh;
+  gap: 80px;
+}
+
+.credits {
+  color: var.$clr-light;
+  position: absolute;
+  bottom: 15px;
+  text-justify: flex-end;
+  font-size: var.$font-m;
+
+  a {
+    color: var.$clr-accent;
+  }
+
+  a:hover {
+    @include help.neon-glow-text();
+  }
+}
+
+.credits__giphy {
+  @include help.flex-centered();
+
+  div {
+    align-self: flex-end;
+    margin: 0 0 5px 5px;
+    width: 6vw;
+  }
+}
