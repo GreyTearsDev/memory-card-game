@@ -1,5 +1,7 @@
 @use "./_variables" as var;
 @use "./_reset.scss";
+@use "./logo.scss";
+@use "./start-screen";
 
 body {
   font-family: var.$font-stack;
