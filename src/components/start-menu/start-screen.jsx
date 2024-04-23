@@ -15,7 +15,7 @@ export default function StartScreen({ onGameStart }) {
         <p>
           Created by <a href="https://github.com/GreyTearsDev">Tirso Samalungo (GreyTearsDev)</a>
         </p>
-        <div>
+        <div className="credits__giphy">
           <p>Powered by</p>
           <div>
             <a href="https://giphy.com">
