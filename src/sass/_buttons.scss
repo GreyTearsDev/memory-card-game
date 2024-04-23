@@ -7,9 +7,10 @@
   border-radius: var.$rad-s;
   transition: all 100ms ease-in-out;
   font-weight: bold;
+  @include help.define-colors(var.$clr-neutral-dark, var.$clr-light);
+  @include help.neon-glow-box-s();
 }
 
 .btn:hover {
-  @include help.define-colors(var.$clr-neutral-dark, var.$clr-light);
-  @include help.neon-glow-box();
+  @include help.neon-glow-box-l();
 }
