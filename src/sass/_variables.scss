@@ -9,3 +9,5 @@ $clr-light: hsl(0, 0%, 95%);
 
 //Fonts
 $font-stack: "Quicksand", "verdana", "sans-serif";
+$font-xl: clamp(20px, 0.4vw, 56px);
+$font-l: clamp(40px, 6vw, 80px);
