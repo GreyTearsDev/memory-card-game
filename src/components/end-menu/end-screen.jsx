@@ -16,7 +16,7 @@ export default function EndScreen({ onGameRestart, highestScore, currentFinalSco
         <h4>Score: {currentFinalScore}</h4>
       </div>
       <p>Highest Score: {highestScore}</p>
-      <button type="button" onClick={onGameRestart}>Restart game</button>
+      <button className="btn btn__main" type="button" onClick={onGameRestart}>Restart game</button>
     </>
   );
 }
