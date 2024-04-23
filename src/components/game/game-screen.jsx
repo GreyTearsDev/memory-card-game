@@ -46,15 +46,12 @@ export default function GameScreen(props) {
   return (
     <div className="game-screen">
       <header>
-        <Logo />
-        <div className="audio-control-container">
-          <AudioControl
-            handleMusic={handleMusic}
-            handleSFX={handleSFX}
-            musicIsOn={musicIsOn}
-            sfxAreOn={sfxAreOn}
-          />
-        </div>
+        <AudioControl
+          handleMusic={handleMusic}
+          handleSFX={handleSFX}
+          musicIsOn={musicIsOn}
+          sfxAreOn={sfxAreOn}
+        />
         <div>
           <p>Score: {score}</p>
           <p>Highest Score: {props.highestScore}</p>
