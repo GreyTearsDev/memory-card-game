@@ -56,13 +56,20 @@
   );
 }
 
-@mixin neon-glow-box() {
+@mixin neon-glow-box-l() {
   box-shadow:
     0 0 30px var.$clr-accent,
     0 0 100px var.$clr-accent;
 }
+
+@mixin neon-glow-box-s() {
+  box-shadow:
+    0 0 5px var.$clr-accent,
+    0 0 10px var.$clr-accent;
+}
+
 @mixin neon-glow-text() {
   text-shadow:
-    0 0 30px var.$clr-accent,
-    0 0 100px var.$clr-accent;
+    0 0 15px var.$clr-accent,
+    0 0 30px var.$clr-accent;
 }
