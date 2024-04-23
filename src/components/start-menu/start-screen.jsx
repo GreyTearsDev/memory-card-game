@@ -4,11 +4,7 @@ import Logo from "../logo";
 export default function StartScreen({ onGameStart }) {
   return (
     <div className="start-screen">
-      <div className="start-screen__logo-wrapper">
-        <h3>Welcome to</h3>
-        <Logo />
-      </div>
-
+      <Logo />
       <button type="button" onClick={onGameStart}>Start Game</button>
 
       <div className="credits">
