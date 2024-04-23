@@ -8,9 +8,11 @@ export default function StartScreen({ onGameStart }) {
       <button type="button" onClick={onGameStart}>Start Game</button>
 
       <div className="credits">
-        <p>
-          Created by <a href="https://github.com/GreyTearsDev">Tirso Samalungo (GreyTearsDev)</a>
-        </p>
+        <div className="credits__github">
+          <p>
+            Created by <a href="https://github.com/GreyTearsDev">Tirso Samalungo (GreyTearsDev)</a>
+          </p>
+        </div>
         <div className="credits__giphy">
           <p>Powered by</p>
           <div>
