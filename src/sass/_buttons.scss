@@ -1,0 +1,15 @@
+@use "./variables" as var;
+@use "./helpers" as help;
+
+.btn {
+  padding: 1em 3em;
+  cursor: pointer;
+  border-radius: var.$rad-s;
+  transition: all 100ms ease-in-out;
+  font-weight: bold;
+}
+
+.btn:hover {
+  @include help.define-colors(var.$clr-neutral-dark, var.$clr-light);
+  @include help.neon-glow-box();
+}
