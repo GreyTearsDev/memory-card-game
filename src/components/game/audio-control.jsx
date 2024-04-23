@@ -3,10 +3,10 @@ export default function AudioControl({ handleMusic, handleSFX, musicIsOn, sfxAre
   return (
     <>
       <div>
-        <button className={musicIsOn ? "btn--on" : "btn--off"} onClick={handleMusic}>
+        <button className={musicIsOn ? "btn btn__sound--on" : "btn btn__sound--off"} onClick={handleMusic}>
           Music: {musicIsOn ? "ON" : "OFF"}
         </button>
-        <button className={musicIsOn ? "btn--on" : "btn--off"} onClick={handleSFX}>
+        <button className={musicIsOn ? "btn btn__sound--on" : "btn btn__sound--off"} onClick={handleSFX}>
           Sfx: {sfxAreOn ? "ON" : "OFF"}
         </button>
       </div>
