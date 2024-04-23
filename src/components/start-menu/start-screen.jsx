@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import Credits from "../credits";
 import Logo from "../logo";
 
 export default function StartScreen({ onGameStart }) {
@@ -6,22 +7,7 @@ export default function StartScreen({ onGameStart }) {
     <div className="start-screen">
       <Logo />
       <button className="btn btn__main" type="button" onClick={onGameStart}>Start Game</button>
-
-      <div className="credits">
-        <div className="credits__github">
-          <p>
-            Created by <a href="https://github.com/GreyTearsDev">Tirso Samalungo (GreyTearsDev)</a>
-          </p>
-        </div>
-        <div className="credits__giphy">
-          <p>Powered by</p>
-          <div>
-            <a href="https://giphy.com">
-              <img src="/assets/icons/giphy-logo.png"></img>
-            </a>
-          </div>
-        </div>
-      </div>
+      <Credits />
     </div>
   );
 }
