@@ -1,0 +1,68 @@
+@use "./variables" as var;
+
+@mixin flex-centered($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin define-colors($background, $text) {
+  background-color: $background;
+  color: $text;
+}
+
+@mixin gradient-general() {
+  background-image: linear-gradient(
+    0deg,
+    hsl(216deg 18% 16%) 63%,
+    hsl(214deg 18% 18%) 77%,
+    hsl(212deg 19% 20%) 84%,
+    hsl(210deg 19% 22%) 89%,
+    hsl(208deg 20% 24%) 92%,
+    hsl(207deg 20% 26%) 94%,
+    hsl(205deg 21% 28%) 96%,
+    hsl(203deg 21% 30%) 97%,
+    hsl(202deg 21% 32%) 98%,
+    hsl(201deg 21% 34%) 99%,
+    hsl(199deg 22% 36%) 99%,
+    hsl(198deg 22% 38%) 100%,
+    hsl(196deg 22% 40%) 100%,
+    hsl(195deg 22% 42%) 100%,
+    hsl(194deg 22% 43%) 101%,
+    hsl(192deg 22% 45%) 101%,
+    hsl(191deg 21% 47%) 101%,
+    hsl(190deg 21% 49%) 101%,
+    hsl(188deg 22% 51%) 101%,
+    hsl(187deg 23% 53%) 100%,
+    hsl(185deg 24% 55%) 100%,
+    hsl(183deg 26% 57%) 100%
+  );
+}
+
+@mixin gradient-black-to-white() {
+  background-image: linear-gradient(
+    0deg,
+    hsl(219deg 13% 22%) 32%,
+    hsl(219deg 9% 29%) 77%,
+    hsl(220deg 6% 36%) 90%,
+    hsl(220deg 5% 44%) 97%,
+    hsl(220deg 4% 52%) 100%,
+    hsl(220deg 3% 60%) 101%,
+    hsl(220deg 3% 68%) 102%,
+    hsl(220deg 3% 76%) 101%,
+    hsl(221deg 2% 85%) 101%,
+    hsl(0deg 0% 93%) 100%
+  );
+}
+
+@mixin neon-glow-box() {
+  box-shadow:
+    0 0 30px var.$clr-accent,
+    0 0 100px var.$clr-accent;
+}
+@mixin neon-glow-text() {
+  text-shadow:
+    0 0 30px var.$clr-accent,
+    0 0 100px var.$clr-accent;
+}
