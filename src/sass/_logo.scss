@@ -1,0 +1,18 @@
+@use "./helpers" as help;
+@use "./variables" as var;
+
+.start-screen__logo {
+  @include help.flex-centered(column);
+  @include help.define-colors(var.$clr-light, var.$clr-dark);
+  padding: 60px 80px;
+  border-radius: var.$rad-s;
+
+  h1,
+  h3 {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: var.$font-xl;
+  }
+}
