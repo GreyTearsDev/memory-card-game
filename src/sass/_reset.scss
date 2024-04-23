@@ -67,6 +67,10 @@ a:not([class]) {
   color: currentColor;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Make images easier to work with */
 img,
 picture {
@@ -81,6 +85,10 @@ textarea,
 select {
   font-family: inherit;
   font-size: inherit;
+}
+
+button {
+  border: none;
 }
 
 /* Make sure textareas without a rows attribute are not tiny */
