@@ -5,7 +5,7 @@ export default function StartScreen({ onGameStart }) {
   return (
     <div className="start-screen">
       <Logo />
-      <button type="button" onClick={onGameStart}>Start Game</button>
+      <button className="btn btn__main" type="button" onClick={onGameStart}>Start Game</button>
 
       <div className="credits">
         <div className="credits__github">
