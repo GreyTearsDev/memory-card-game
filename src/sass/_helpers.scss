@@ -33,19 +33,23 @@
   );
 }
 
-@mixin gradient-black-to-white() {
+@mixin gradient-light() {
   background-image: linear-gradient(
     0deg,
-    hsl(219deg 13% 22%) 32%,
-    hsl(219deg 9% 29%) 77%,
-    hsl(220deg 6% 36%) 90%,
-    hsl(220deg 5% 44%) 97%,
-    hsl(220deg 4% 52%) 100%,
-    hsl(220deg 3% 60%) 101%,
-    hsl(220deg 3% 68%) 102%,
-    hsl(220deg 3% 76%) 101%,
-    hsl(221deg 2% 85%) 101%,
-    hsl(0deg 0% 93%) 100%
+    hsl(35deg 14% 83%) 0%,
+    hsl(32deg 15% 84%) 3%,
+    hsl(29deg 15% 86%) 5%,
+    hsl(27deg 16% 87%) 8%,
+    hsl(24deg 17% 88%) 12%,
+    hsl(22deg 17% 90%) 16%,
+    hsl(19deg 18% 91%) 20%,
+    hsl(17deg 18% 92%) 25%,
+    hsl(14deg 18% 94%) 31%,
+    hsl(12deg 19% 95%) 38%,
+    hsl(9deg 19% 96%) 47%,
+    hsl(6deg 20% 97%) 59%,
+    hsl(3deg 22% 98%) 76%,
+    hsl(0deg 33% 99%) 100%
   );
 }
 
