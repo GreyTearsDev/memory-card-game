@@ -8,11 +8,15 @@ $clr-light: hsl(37, 14%, 83%);
 
 //Fonts
 $font-stack: "Quicksand", "verdana", "sans-serif";
-$font-xl: clamp(20px, 4vw, 86px);
-$font-l: clamp(15px, 3vw, 66px);
-$font-m: clamp(10px, 1.5vw, 46px);
+$font-xl: clamp(25px, 4vw, 86px);
+$font-l: clamp(20px, 3vw, 66px);
+$font-m: clamp(15px, 1.5vw, 46px);
+$font-s: clamp(10px, 1vw, 26px);
 
 //Border radius
 $rad-l: 20px;
 $rad-m: 15px;
 $rad-s: 10px;
+
+//Padding
+$pad-general: calc(8px + 1.5625vw);
