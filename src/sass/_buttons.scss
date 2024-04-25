@@ -7,7 +7,7 @@
   border-radius: var.$rad-s;
   transition: all 100ms ease-in-out;
   font-weight: bold;
-  @include help.define-colors(var.$clr-neutral-dark, var.$clr-light);
+  @include help.define-colors(var.$clr-light, var.$clr-dark);
   @include help.neon-glow-box-s();
 }
 
