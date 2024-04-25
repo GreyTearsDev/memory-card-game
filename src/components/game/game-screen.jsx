@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
-import Logo from "../logo";
 import AudioControl from "./audio-control";
 import CardContainer from "./card-container";
 
