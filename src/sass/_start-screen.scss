@@ -2,7 +2,7 @@
 @use "./helpers" as help;
 
 .start-screen {
-  @include help.flex-centered(column);
+  @include help.flex(column);
   @include help.gradient-general();
   height: 100vh;
   gap: 80px;
@@ -25,7 +25,7 @@
 }
 
 .credits__giphy {
-  @include help.flex-centered();
+  @include help.flex();
 
   div {
     align-self: flex-end;
