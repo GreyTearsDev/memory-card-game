@@ -8,9 +8,12 @@
   transition: all 100ms ease-in-out;
   font-weight: bold;
   @include help.define-colors(var.$clr-light, var.$clr-dark);
+}
+
+.btn__main {
   @include help.neon-glow-box-s();
 }
 
-.btn:hover {
+.btn__main:hover {
   @include help.neon-glow-box-l();
 }
