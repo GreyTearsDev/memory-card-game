@@ -51,7 +51,7 @@ export default function GameScreen(props) {
           musicIsOn={musicIsOn}
           sfxAreOn={sfxAreOn}
         />
-        <div>
+        <div className="score-board">
           <p>Score: {score}</p>
           <p>Highest Score: {props.highestScore}</p>
         </div>
