@@ -1,0 +1,29 @@
+@use "./helpers" as help;
+@use "./variables" as var;
+
+.game-screen {
+  display: grid;
+  grid-template-rows: 150px 1fr;
+
+  header {
+    @include help.flex(_, space-between, _);
+    padding: 0 5vw;
+    @include help.define-colors(var.$clr-dark, var.$clr-light);
+
+    .audio-control-container,
+    .score-board {
+      border: 1px solid red;
+      @include help.flex(column, center, flex-start);
+      gap: 0.4vw;
+    }
+
+    .score-board {
+      p {
+        margin: 0;
+      }
+    }
+    .audio-control-container {
+      width: 200px;
+    }
+  }
+}
