@@ -4,10 +4,16 @@
 .btn {
   padding: 1em 3em;
   cursor: pointer;
-  border-radius: var.$rad-s;
+  border-radius: var.$rad-l;
   transition: all 100ms ease-in-out;
+  font-size: var.$font-s;
   font-weight: bold;
-  @include help.define-colors(var.$clr-light, var.$clr-dark);
+  @include help.gradient-light;
+  @include help.define-colors(var.$clr-light, var.$clr-accent);
+}
+
+.btn__sound {
+  width: 100%;
 }
 
 .btn__main {
@@ -15,5 +21,6 @@
 }
 
 .btn__main:hover {
+  color: var.$clr-dark;
   @include help.neon-glow-box-l();
 }
