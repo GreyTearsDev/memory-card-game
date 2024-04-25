@@ -3,6 +3,7 @@
 @use "./logo.scss";
 @use "./buttons";
 @use "./start-screen";
+@use "./game-screen.scss";
 
 body {
   font-family: var.$font-stack;
