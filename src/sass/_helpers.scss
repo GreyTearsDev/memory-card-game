@@ -33,6 +33,26 @@
   );
 }
 
+@mixin gradient-deactivated-button() {
+  background-image: linear-gradient(
+    0deg,
+    hsl(0deg 0% 89%) 0%,
+    hsl(344deg 0% 90%) 5%,
+    hsl(344deg 0% 91%) 10%,
+    hsl(344deg 0% 92%) 15%,
+    hsl(344deg 0% 92%) 19%,
+    hsl(344deg 0% 93%) 23%,
+    hsl(344deg 0% 94%) 27%,
+    hsl(344deg 0% 95%) 30%,
+    hsl(344deg 0% 96%) 33%,
+    hsl(344deg 0% 97%) 35%,
+    hsl(344deg 0% 97%) 38%,
+    hsl(344deg 0% 98%) 40%,
+    hsl(344deg 0% 99%) 43%,
+    hsl(0deg 0% 100%) 57%
+  );
+}
+
 @mixin gradient-light() {
   background-image: linear-gradient(
     0deg,
@@ -69,4 +89,8 @@
   text-shadow:
     0 0 15px var.$clr-accent,
     0 0 30px var.$clr-accent;
+}
+
+@function getGap($pixels) {
+  @return calc($pixels + 1.5625vw);
 }
