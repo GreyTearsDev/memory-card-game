@@ -2,7 +2,6 @@
 @use "./helpers" as help;
 
 .btn {
-  padding: 1em 3em;
   cursor: pointer;
   border-radius: var.$rad-l;
   transition: all 100ms ease-in-out;
@@ -14,9 +13,11 @@
 
 .btn__sound {
   width: 100%;
+  padding: 0.2em 0.6em;
 }
 
 .btn__main {
+  padding: 1em 3em;
   @include help.neon-glow-box-s();
 }
 
