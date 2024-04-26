@@ -105,8 +105,9 @@ textarea:not([rows]) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: hsl(0, 0%, 93%);
-  color: hsl(220, 9%, 15%);
+  background-image: linear-gradient(0deg, hsl(35, 14%, 83%) 0%, hsl(32, 15%, 84%) 3%, hsl(29, 15%, 86%) 5%, hsl(27, 16%, 87%) 8%, hsl(24, 17%, 88%) 12%, hsl(22, 17%, 90%) 16%, hsl(19, 18%, 91%) 20%, hsl(17, 18%, 92%) 25%, hsl(14, 18%, 94%) 31%, hsl(12, 19%, 95%) 38%, hsl(9, 19%, 96%) 47%, hsl(6, 20%, 97%) 59%, hsl(3, 22%, 98%) 76%, hsl(0, 33%, 99%) 100%);
+  background-color: hsl(37, 14%, 83%);
+  color: hsl(24, 29%, 50%);
   padding: 60px 80px;
   border-radius: 10px;
 }
@@ -115,21 +116,33 @@ textarea:not([rows]) {
   margin: 0;
 }
 .start-screen__logo h1 {
-  font-size: clamp(20px, 4vw, 86px);
+  font-size: clamp(25px, 4vw, 86px);
 }
 
 .btn {
-  padding: 1em 3em;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: all 100ms ease-in-out;
+  font-size: clamp(10px, 1vw, 26px);
   font-weight: bold;
+  background-image: linear-gradient(0deg, hsl(35, 14%, 83%) 0%, hsl(32, 15%, 84%) 3%, hsl(29, 15%, 86%) 5%, hsl(27, 16%, 87%) 8%, hsl(24, 17%, 88%) 12%, hsl(22, 17%, 90%) 16%, hsl(19, 18%, 91%) 20%, hsl(17, 18%, 92%) 25%, hsl(14, 18%, 94%) 31%, hsl(12, 19%, 95%) 38%, hsl(9, 19%, 96%) 47%, hsl(6, 20%, 97%) 59%, hsl(3, 22%, 98%) 76%, hsl(0, 33%, 99%) 100%);
+  background-color: hsl(37, 14%, 83%);
+  color: hsl(24, 29%, 50%);
 }
 
-.btn:hover {
-  background-color: hsl(220, 11%, 23%);
-  color: hsl(0, 0%, 93%);
-  box-shadow: 0 0 30px hsl(179, 22%, 61%), 0 0 100px hsl(179, 22%, 61%);
+.btn__sound {
+  width: 100%;
+  padding: 0.2em 0.6em;
+}
+
+.btn__main {
+  padding: 1em 3em;
+  box-shadow: 0 0 5px hsl(24, 29%, 50%), 0 0 10px hsl(24, 29%, 50%);
+}
+
+.btn__main:hover {
+  color: hsl(194, 13%, 16%);
+  box-shadow: 0 0 30px hsl(24, 29%, 50%), 0 0 100px hsl(24, 29%, 50%);
 }
 
 .start-screen {
@@ -137,23 +150,23 @@ textarea:not([rows]) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(0deg, hsl(216, 18%, 16%) 63%, hsl(214, 18%, 18%) 77%, hsl(212, 19%, 20%) 84%, hsl(210, 19%, 22%) 89%, hsl(208, 20%, 24%) 92%, hsl(207, 20%, 26%) 94%, hsl(205, 21%, 28%) 96%, hsl(203, 21%, 30%) 97%, hsl(202, 21%, 32%) 98%, hsl(201, 21%, 34%) 99%, hsl(199, 22%, 36%) 99%, hsl(198, 22%, 38%) 100%, hsl(196, 22%, 40%) 100%, hsl(195, 22%, 42%) 100%, hsl(194, 22%, 43%) 101%, hsl(192, 22%, 45%) 101%, hsl(191, 21%, 47%) 101%, hsl(190, 21%, 49%) 101%, hsl(188, 22%, 51%) 101%, hsl(187, 23%, 53%) 100%, hsl(185, 24%, 55%) 100%, hsl(183, 26%, 57%) 100%);
+  background-image: linear-gradient(330deg, hsl(194, 13%, 20%) 0%, hsl(193, 13%, 20%) 10%, hsl(193, 13%, 21%) 18%, hsl(192, 13%, 22%) 25%, hsl(191, 13%, 22%) 32%, hsl(191, 12%, 23%) 39%, hsl(190, 12%, 23%) 46%, hsl(189, 12%, 24%) 53%, hsl(188, 12%, 24%) 60%, hsl(188, 12%, 25%) 66%, hsl(187, 12%, 26%) 73%, hsl(186, 12%, 26%) 80%, hsl(185, 12%, 27%) 86%, hsl(185, 11%, 27%) 93%, hsl(184, 11%, 28%) 100%);
   height: 100vh;
   gap: 80px;
 }
 
 .credits {
-  color: hsl(0, 0%, 93%);
+  color: hsl(37, 14%, 83%);
   position: absolute;
   bottom: 15px;
   text-justify: flex-end;
-  font-size: clamp(10px, 1.5vw, 46px);
+  font-size: clamp(15px, 1.5vw, 46px);
 }
 .credits a {
-  color: hsl(179, 22%, 61%);
+  color: hsl(24, 29%, 50%);
 }
 .credits a:hover {
-  text-shadow: 0 0 30px hsl(179, 22%, 61%), 0 0 100px hsl(179, 22%, 61%);
+  text-shadow: 0 0 15px hsl(24, 29%, 50%), 0 0 30px hsl(24, 29%, 50%);
 }
 
 .credits__giphy {
@@ -166,6 +179,65 @@ textarea:not([rows]) {
   align-self: flex-end;
   margin: 0 0 5px 5px;
   width: 6vw;
+}
+
+.game-screen {
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  height: 100vh;
+}
+.game-screen header {
+  display: flex;
+  flex-direction: _;
+  justify-content: space-between;
+  align-items: _;
+  padding: 0 5vw;
+  background-color: hsl(194, 13%, 16%);
+  color: hsl(37, 14%, 83%);
+}
+.game-screen header .audio-control-container,
+.game-screen header .score-board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.4vw;
+}
+.game-screen header .score-board p {
+  margin: 0;
+  font-size: clamp(15px, 1.5vw, 46px);
+}
+.game-screen header .audio-control-container {
+  max-width: clamp(100px, 6vw, 200px);
+}
+
+.card-container {
+  background-color: hsl(194, 12%, 30%);
+  color: _;
+  padding: 5vw;
+  justify-content: center;
+  align-content: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 300px);
+  gap: 2vw;
+}
+.card-container .card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(37, 14%, 83%);
+  color: _;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.card-container .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 body {
