@@ -1,8 +1,17 @@
-# React + Vite
+# The Paw Café
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A memory card game built in ReactJS
 
-Currently, two official plugins are available:
+## Click [HERE](https://memory-card-game-plum.vercel.app/) to checkout the live preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies used
+
+<p>
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=html,css,javascript,react,sass,vite,git,vercel" />
+  </a>
+</p>
+
+
+
+This is the second project of the react course in the [The Odin Project](https://www.theodinproject.com/)'s Full-Stack JS curriculum.
