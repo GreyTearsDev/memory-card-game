@@ -10,12 +10,12 @@ export default function EndScreen({ onGameRestart, highestScore, currentFinalSco
   };
   return (
     <div className="end-screen">
-      <h1>Game over</h1>
-      <div>
+      <div className="end-screen__pannel">
+        <h1>Game over</h1>
         <h1>{getStars()}</h1>
         <h4>Score: {currentFinalScore}</h4>
+        <h3>Highest Score: {highestScore}</h3>
       </div>
-      <p>Highest Score: {highestScore}</p>
       <button className="btn btn__main" type="button" onClick={onGameRestart}>Restart game</button>
     </div>
   );
