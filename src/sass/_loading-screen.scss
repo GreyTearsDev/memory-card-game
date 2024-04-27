@@ -1,0 +1,17 @@
+@use "variables" as var;
+@use "helpers" as help;
+
+.loading-screen {
+  @include help.flex(column);
+  @include help.gradient-general();
+  height: 100vh;
+
+  svg {
+    fill: var.$clr-light;
+  }
+
+  p {
+    color: var.$clr-light;
+    font-size: var.$font-m;
+  }
+}
