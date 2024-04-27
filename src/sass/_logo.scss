@@ -2,8 +2,9 @@
 @use "./variables" as var;
 
 .start-screen__logo {
-  @include help.flex-centered(column);
-  @include help.define-colors(var.$clr-light, var.$clr-dark);
+  @include help.flex(column);
+  @include help.gradient-light;
+  @include help.define-colors(var.$clr-light, var.$clr-accent);
   padding: 60px 80px;
   border-radius: var.$rad-s;
 

@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
-import Logo from "../logo";
 import AudioControl from "./audio-control";
 import CardContainer from "./card-container";
 
@@ -46,16 +45,13 @@ export default function GameScreen(props) {
   return (
     <div className="game-screen">
       <header>
-        <Logo />
-        <div className="audio-control-container">
-          <AudioControl
-            handleMusic={handleMusic}
-            handleSFX={handleSFX}
-            musicIsOn={musicIsOn}
-            sfxAreOn={sfxAreOn}
-          />
-        </div>
-        <div>
+        <AudioControl
+          handleMusic={handleMusic}
+          handleSFX={handleSFX}
+          musicIsOn={musicIsOn}
+          sfxAreOn={sfxAreOn}
+        />
+        <div className="score-board">
           <p>Score: {score}</p>
           <p>Highest Score: {props.highestScore}</p>
         </div>

@@ -1,16 +1,20 @@
 import PropTypes from "prop-types";
 export default function AudioControl({ handleMusic, handleSFX, musicIsOn, sfxAreOn }) {
   return (
-    <>
-      <div>
-        <button className={musicIsOn ? "btn btn__sound--on" : "btn btn__sound--off"} onClick={handleMusic}>
-          Music: {musicIsOn ? "ON" : "OFF"}
-        </button>
-        <button className={musicIsOn ? "btn btn__sound--on" : "btn btn__sound--off"} onClick={handleSFX}>
-          Sfx: {sfxAreOn ? "ON" : "OFF"}
-        </button>
-      </div>
-    </>
+    <div className="audio-control-container">
+      <button
+        className="btn btn__sound"
+        onClick={handleMusic}
+      >
+        Music: {musicIsOn ? "ON" : "OFF"}
+      </button>
+      <button
+        className="btn btn__sound"
+        onClick={handleSFX}
+      >
+        Sfx: {sfxAreOn ? "ON" : "OFF"}
+      </button>
+    </div>
   );
 }
 

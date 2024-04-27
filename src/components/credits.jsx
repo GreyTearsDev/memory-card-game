@@ -10,7 +10,7 @@ export default function Credits() {
         <p>Powered by</p>
         <div>
           <a href="https://giphy.com">
-            <img src="/assets/icons/giphy-logo.png"></img>
+            <img src="/assets/icons/giphy-logo.png" alt=""></img>
           </a>
         </div>
       </div>
