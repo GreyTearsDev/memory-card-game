@@ -1,3 +1,5 @@
+import Credits from "./credits";
+
 export default function LoadingWidget() {
   return (
     <div className="loading-screen">
@@ -7,6 +9,7 @@ export default function LoadingWidget() {
         </svg>
       </div>
       <p>Loading...</p>
+      <Credits />
     </div>
   );
 }
