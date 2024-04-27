@@ -1,0 +1,37 @@
+@use "variables" as var;
+@use "helpers" as help;
+
+.end-screen {
+  @include help.flex(column);
+  @include help.gradient-general();
+  height: 100vh;
+  gap: 80px;
+}
+
+.end-screen__pannel {
+  @include help.flex(column);
+  @include help.gradient-light;
+  @include help.define-colors(var.$clr-light, var.$clr-accent);
+  padding: 60px 80px;
+  border-radius: var.$rad-s;
+  gap: 10px;
+
+  h3,
+  h4 {
+    color: var.$clr-dark;
+  }
+
+  h1,
+  h3,
+  h4,
+  p {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: var.$font-xl;
+  }
+
+  p {
+  }
+}
