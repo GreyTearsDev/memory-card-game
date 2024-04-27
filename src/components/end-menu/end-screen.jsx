@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import Credits from "../credits";
 
 export default function EndScreen({ onGameRestart, highestScore, currentFinalScore }) {
   const getStars = () => {
@@ -17,6 +18,7 @@ export default function EndScreen({ onGameRestart, highestScore, currentFinalSco
         <h3>Highest Score: {highestScore}</h3>
       </div>
       <button className="btn btn__main" type="button" onClick={onGameRestart}>Restart game</button>
+      <Credits />
     </div>
   );
 }
