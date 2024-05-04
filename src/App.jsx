@@ -17,7 +17,12 @@ function App() {
 
   useEffect(() => {
     fetch(apiURL)
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          throw Error("could not fetch data from source");
+        }
+        return response.json();
+      })
       .then(response => setGifs(response.data));
   }, [apiURL]);
 
